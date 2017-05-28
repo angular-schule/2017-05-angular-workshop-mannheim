@@ -74,6 +74,6 @@ team@angular.schule
 
 <hr>
 
-### &copy; 2017 http://angular.schule, Stand: 05.05.2017
+### &copy; 2017 http://angular.schule, Stand: 29.05.2017
 
 
