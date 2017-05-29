@@ -31,7 +31,7 @@ npm install -g windows-build-tools
 Danach bitte folgenden Befehl ausführen. Warnungen von NPM können ignoriert werden. 
 
 ```
-npm install -g @angular/cli@1.0.2
+npm install -g @angular/cli@1.0.6
 ```
 
 ...bitte anschließend die Versionen überprüfen:
@@ -44,7 +44,7 @@ npm -v
 > Erwartet: 3.x oder höher
 
 ng -v
-> Erwartet: 1.0.2
+> Erwartet: 1.0.6
 
 ```
 
