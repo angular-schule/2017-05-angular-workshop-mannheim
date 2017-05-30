@@ -12,9 +12,12 @@ export class BookComponent implements OnInit {
   @Input()
   book: Book;
 
-  constructor() { }
+  constructor() {
+    //4window.setInterval(function() { console.log('adsasd') }, 1);
+  }
 
   ngOnInit() {
+   // throw "asdasd";
   }
 
 }
