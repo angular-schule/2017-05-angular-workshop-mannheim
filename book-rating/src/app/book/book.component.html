@@ -8,6 +8,10 @@
     threeStarRating: book.rating == 3
    }">
 
-   {{ book.title }} <small>Stars {{ book.rating }}</small></h2>
+   {{ book.title }} <small>Stars {{ book.rating }}</small>
+
+   <i *ngFor="let x of rating" class="glyphicon glyphicon-star"></i>
+
+   </h2>
   <p>{{ book.description }}</p>
 </div>

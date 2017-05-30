@@ -18,4 +18,8 @@ export class BookComponent implements OnInit {
   ngOnInit() {
   }
 
+  get rating(): number[] {
+    console.log('test');
+    return new Array(this.book.rating);
+  }
 }
