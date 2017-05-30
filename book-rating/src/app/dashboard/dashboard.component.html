@@ -1,0 +1,15 @@
+
+<br-book
+  [book]="b"
+  *ngFor="let b of books"></br-book>
+
+
+-------------------------------------------
+
+
+<div *ngFor="let b of books; let i = index">
+
+  {{ i+1 }}
+  <br-book [book]="b"></br-book>
+
+</div>
