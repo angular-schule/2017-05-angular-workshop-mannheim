@@ -19,7 +19,6 @@ export class BookComponent implements OnInit {
   }
 
   get rating(): number[] {
-    console.log('test');
     return new Array(this.book.rating);
   }
 }

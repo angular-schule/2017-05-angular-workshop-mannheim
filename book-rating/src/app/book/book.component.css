@@ -1,7 +1,11 @@
 .fiveStarRating {
-  color: green;
+  /* color: green; */
 }
 
 .threeStarRating {
-  color: yellow;
+  /* color: yellow; */
+}
+
+h2 {
+  color: red;
 }
