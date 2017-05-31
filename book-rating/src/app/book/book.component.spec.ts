@@ -16,11 +16,11 @@ describe('BookComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(BookComponent);
-    component = fixture.componentInstance;
 
+    component = fixture.componentInstance;
   });
 
-  it('should rate the Book up when the controller rateUp() was called', () => {
+  it('should rate the Book up when button was clicked', () => {
 
     component.book = {
       rateUp: () => { },
@@ -29,7 +29,7 @@ describe('BookComponent', () => {
 
     spyOn(component.book, 'rateUp');
 
-    component.rateUp();
+    fixture.nativeElement.querySelector('.glyphicon-thumbs-up').click();
     expect(component.book.rateUp).toHaveBeenCalled();
 
     fixture.detectChanges();
