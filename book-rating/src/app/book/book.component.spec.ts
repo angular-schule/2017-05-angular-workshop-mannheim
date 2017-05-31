@@ -22,15 +22,15 @@ describe('BookComponent', () => {
 
   it('should rate the Book up when the controller rateUp() was called', () => {
 
-    let rateUpWasCalled = false;
-
     component.book = {
-      rateUp: () => { rateUpWasCalled = true; },
+      rateUp: () => { },
       rateDown: () => {}
     } as Book;
 
+    spyOn(component.book, 'rateUp');
+
     component.rateUp();
-    expect(rateUpWasCalled).toBe(true);
+    expect(component.book.rateUp).toHaveBeenCalled();
 
     fixture.detectChanges();
   });
