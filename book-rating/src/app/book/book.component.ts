@@ -18,7 +18,16 @@ export class BookComponent implements OnInit {
   ngOnInit() {
   }
 
+  rateUp() {
+    this.book.rateUp();
+  }
+
+  rateDown() {
+    this.book.rateDown();
+  }
+
   get rating(): number[] {
+    // console.log('Change Detection');
     return new Array(this.book.rating);
   }
 }
