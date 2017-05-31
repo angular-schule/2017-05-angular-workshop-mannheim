@@ -18,20 +18,20 @@ describe('BookComponent', () => {
     fixture = TestBed.createComponent(BookComponent);
     component = fixture.componentInstance;
 
-    component.book = {
-      isbn: '',
-      title: '',
-      description: '',
-      rating: 0,
-      rateUp: () => {},
-      rateDown: () => {}
-    };
-
-    fixture.detectChanges();
-
   });
 
-  it('should be created', () => {
-    expect(component).toBeTruthy();
+  it('should rate the Book up when the controller rateUp() was called', () => {
+
+    let rateUpWasCalled = false;
+
+    component.book = {
+      rateUp: () => { rateUpWasCalled = true; },
+      rateDown: () => {}
+    } as Book;
+
+    component.rateUp();
+    expect(rateUpWasCalled).toBe(true);
+
+    fixture.detectChanges();
   });
 });
