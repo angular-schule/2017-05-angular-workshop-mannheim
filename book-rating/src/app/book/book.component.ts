@@ -24,7 +24,6 @@ export class BookComponent {
   }
 
   get rating(): number[] {
-    // console.log('Change Detection');
     return new Array(this.book.rating);
   }
 }
