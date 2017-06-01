@@ -11,7 +11,7 @@ describe('book-rating App', () => {
   it('should display the title', () => {
     page.navigateTo();
 
-    //browser.pause(); // !
+    // browser.pause(); // !
 
     expect(page.getParagraphText()).toEqual('Book Rating');
   });
