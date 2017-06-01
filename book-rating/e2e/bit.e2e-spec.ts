@@ -9,6 +9,8 @@ fdescribe('Bridging IT homepage', () => {
 
     // browser.driver.manage().window().setSize(100, 100);
 
+    // debugger;
+
     browser.get('http://www.bridging-it.de/');
     const footerElement = element(by.css('footer .muted.hidden-xs'));
 
