@@ -1,0 +1,15 @@
+.form-control {
+  &.ng-dirty,
+  &.ng-touched {
+
+    border-left-width: 4px;
+
+    &.ng-valid {
+      border-left-color: greenyellow;
+    }
+
+    &.ng-invalid {
+      border-left-color: orangered;
+    }
+  }
+}
