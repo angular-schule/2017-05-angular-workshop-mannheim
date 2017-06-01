@@ -18,7 +18,6 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
 
   constructor() { }
 
-
   ngOnInit() {
     this.books = [
       new Book('000', 'Angular', 'Zurück in die Zukunft', 5),
@@ -26,6 +25,9 @@ export class DashboardComponent implements OnInit, AfterViewInit, OnDestroy {
     ];
   }
 
+  add(book: Book) {
+    this.books.push(book);
+  }
 
   ngAfterViewInit() {
     this.subcription = this.myChild.rated
