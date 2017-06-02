@@ -1,3 +1,4 @@
+import {Http} from '@angular/http';
 import { BookStoreService } from './../shared/book-store.service';
 import { Subscription } from 'rxjs/Rx';
 import { AfterViewInit, OnDestroy } from '@angular/core/core';
@@ -9,7 +10,16 @@ import 'rxjs/add/operator/filter';
 @Component({
   selector: 'br-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
+  providers: [
+    {
+      provide: BookStoreService,
+      useFactory: (http) => {
+        return new BookStoreService(http);
+      },
+      deps: [Http]
+    }
+  ]
 })
 export class DashboardComponent implements OnInit {
   books: Book[] = [];
