@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookDetailsComponent implements OnInit {
 
-  isbn: Observable<string>;
+  isbn$: Observable<string>;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -19,7 +19,7 @@ export class BookDetailsComponent implements OnInit {
     //   this.isbn = params.isbn;
     // });
 
-    this.isbn =
+    this.isbn$ =
       this.route.params
       .map(params => params.isbn);
   }

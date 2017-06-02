@@ -1,4 +1,12 @@
-TODO, Zeige Buch mit der ISBN {{ isbn | async }}
+TODO, Zeige Buch mit der ISBN
+
+<div *ngIf="isbn$ | async as isbn">
+
+  {{ isbn }},
+  {{ isbn }},
+  {{ isbn }}
+
+</div>
 
 <hr>
 
