@@ -10,16 +10,18 @@ import { BookComponent } from './book/book.component';
 import { CreateBookComponent } from './create-book/create-book.component';
 
 import { BookStoreService } from './shared/book-store.service';
+import { BookDetailsComponent } from './book-details/book-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     BookComponent,
-    CreateBookComponent
+    CreateBookComponent,
+    BookDetailsComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, // CommonModule
     FormsModule,
     HttpModule,
     AppRoutingModule

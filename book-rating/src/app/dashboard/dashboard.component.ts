@@ -25,9 +25,6 @@ export class DashboardComponent implements OnInit {
     this.bs
       .getAllBooks()
       .subscribe(books => this.books = books);
-
-
-      this.bs.delete('222').subscribe();
   }
 
   add(book: Book) {
