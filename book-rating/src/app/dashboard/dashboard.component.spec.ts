@@ -5,7 +5,7 @@ import { DashboardComponent } from './dashboard.component';
 import 'rxjs/add/observable/of';
 import { Observable } from 'rxjs/Observable';
 
-fdescribe('DashboardComponent', () => {
+xdescribe('DashboardComponent', () => {
   let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
 
