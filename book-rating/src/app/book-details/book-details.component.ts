@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs/Observable';
 import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,14 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookDetailsComponent implements OnInit {
 
-  isbn: string;
+  isbn: Observable<string>;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     // this.isbn = this.route.snapshot.params.isbn;
 
-    this.route.params.subscribe(params => {
-      this.isbn = params.isbn;
-    });
+    // this.route.params.subscribe(params => {
+    //   this.isbn = params.isbn;
+    // });
+
+    this.isbn =
+      this.route.params
+      .map(params => params.isbn);
   }
 }
