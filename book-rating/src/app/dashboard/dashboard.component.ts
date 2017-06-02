@@ -1,4 +1,4 @@
-import {Http} from '@angular/http';
+import { Http } from '@angular/http';
 import { BookStoreService } from './../shared/book-store.service';
 import { Subscription } from 'rxjs/Rx';
 import { AfterViewInit, OnDestroy } from '@angular/core/core';
@@ -7,6 +7,10 @@ import { Book } from './../shared/book';
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import 'rxjs/add/operator/filter';
 
+export function myFactory(http) {
+  return new BookStoreService(http);
+};
+
 @Component({
   selector: 'br-dashboard',
   templateUrl: './dashboard.component.html',
@@ -14,9 +18,7 @@ import 'rxjs/add/operator/filter';
   providers: [
     {
       provide: BookStoreService,
-      useFactory: (http) => {
-        return new BookStoreService(http);
-      },
+      useFactory: myFactory,
       deps: [Http]
     }
   ]
